@@ -7,6 +7,17 @@ const htmlRoutes = require('./routes/htmlroutes');
 const app = express();
 const PORT = 3000;
 
+//  ------------ Parsing, route middleware and statis files ------------------
+// Parse JSON request bodies:
+app.use(express.json());
+// Parse URL encoded request bodies
+app.use(express.urlencoded({ extended: true }));
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
+// Use 'apiRoutes' for '/api' routes and 'htmlRoutes' for root ('/') routes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
+
 // Get the express server started and lisening to the 3000 port.
 app.listen(PORT, () => {
     console.log('Server listening on port ${PORT}');
