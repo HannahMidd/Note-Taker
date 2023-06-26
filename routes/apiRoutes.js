@@ -8,7 +8,7 @@ router.get('/notes', (req, res) => {
         .then((notes) => {
             return res.json(notes);
         })
-        .catch((err) => res.status(500).json(error));
+        .catch((err) => res.status(500).json(err));
 });
 
 // Post the notes to the page

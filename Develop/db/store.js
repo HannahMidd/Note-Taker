@@ -16,18 +16,27 @@ const writeFileAsync = util.promisify(fs.writeFile);
 class Store {
     // To read the note
     read() {
-        return readFileAsync('db/db.json', 'utf8');
+        return readFileAsync('Develop/db/db.json', 'utf8');
     }
     // To write the note
     write(note) {
-        return writeFileAsync('db/db.json', JSON.stringify(note));
+        return writeFileAsync('Develop/db/db.json', JSON.stringify(note));
     }
     // To retrieve the notes
     getNotes() {
         return this.read().then((notes) => {
             let parsedNotes;
+            // Send back a new empty array uf note cant be turned into one
+            try {
+                parsedNotes = [].concat(JSON.parse(notes));
+            } catch (err) {
+                parsedNotes = [];
+            }
+
+            return parsedNotes;
         });
     }
+
     // Add the note
     addNote(note) {
         const { title, text } = note;
