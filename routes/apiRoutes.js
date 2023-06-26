@@ -19,7 +19,7 @@ router.post('/notes', (req, res) => {
         .catch((err) => res.status(500).json(err));
 });
 
-// Delete a note based on the ID field (each note has unique ID)
+// Delete a note based on the ID field (each note has unique ID) from the npm package: https://www.npmjs.com/package/uuid
 router.delete('/notes/:id', (req, res) => {
     store
         .removeNote(req.params.id)
