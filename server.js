@@ -5,7 +5,7 @@ const htmlRoutes = require('./routes/htmlroutes');
 
 // Creating port (use this port number throughout)
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3003;
 
 //  ------------ Parsing, route middleware and statis files ------------------
 // Parse JSON request bodies:
@@ -22,4 +22,4 @@ app.use('/', htmlRoutes);
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
 // RUN node index.js TO START EXPRESS SERVER
-// USE IMSOMNIA TO ACCESS APPLICATION: USE http://localhost:3000
+// USE IMSOMNIA TO ACCESS APPLICATION: USE http://localhost:3003
