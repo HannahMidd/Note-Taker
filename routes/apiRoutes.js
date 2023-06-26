@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const store = require('../db/store');
+const store = require('../Develop/db/store.js');
 
 // The /api/notes will get (respond with) the all notes
 router.get('/notes', (req, res) => {
