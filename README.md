@@ -26,6 +26,10 @@ To use, access the deployed Heroku site at: https://glacial-beyond-99688-7ab2f81
 
 ## Usage
 
+![NoteTaker Intro](./public/assets/css/Screenshot%202023-06-26%20212138.png)
+![NoteTaker Intro](./public/assets/css/Screenshot%202023-06-26%20212413.png)
+
+
 To use the app, begin by accessing the deployed Heroku site at: https://glacial-beyond-99688-7ab2f81660f4.herokuapp.com and click on the link to the notes page. Enter the note title and description and click on the "save" icon in the top right hand corner. If you would like to delete a note, click the "trash" icon next to the note. 
 
 ## License
